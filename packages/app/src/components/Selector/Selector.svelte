@@ -7,6 +7,8 @@
   let limitPrice = 59;
   let shares = 0;
   let isLoggedIn = false;
+  let startDate = 1720983600000;
+  let endDate = 1720990800000;
 
   function switchTab(tab: string) {
     selectedTab = tab;
@@ -156,6 +158,14 @@
   <div class="tabs">
     <div class="tab {selectedTab === 'Buy' ? 'selected' : ''}" on:click={() => switchTab('Buy')}>Buy</div>
     <div class="tab {selectedTab === 'Sell' ? 'selected' : ''}" on:click={() => switchTab('Sell')}>Sell</div>
+  </div>
+  <div class="field">
+    <label for="limitPrice">Match Details</label>
+    <div>
+      <span class='price'>{new Date(startDate).toLocaleString()}</span>
+      -
+      <span class='price'>{new Date(endDate).toLocaleString()}</span>
+    </div>
   </div>
 
   <div class="outcome">
