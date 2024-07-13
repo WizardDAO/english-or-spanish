@@ -1,8 +1,8 @@
-### "Pancake Prediction Market"
+### Design Statement for "Pancake Prediction Market"
 
 #### Project Overview
 
-"Pancake Prediction Market" is an innovative and versatile decentralized prediction market platform. Leveraging v4 hooks and a pull-based oracle mechanism, the platform allows users to engage in prediction markets across various domains, including sports, politics, finance, and entertainment. The platform aims to showcase its capabilities through a football betting use case during the hackathon, specifically featuring finals of the Euro 2024, England vs. Spain.
+"Pancake Prediction Market" is an innovative and versatile decentralized prediction market platform. Leveraging V4 hooks and a pull-based oracle mechanism, the platform allows users to engage in prediction markets across various domains, including sports, politics, finance, and entertainment. The platform aims to showcase its capabilities through a football betting use case during the hackathon, specifically featuring the Euro 2024 matches.
 
 #### Objective
 
@@ -17,12 +17,13 @@ To create a decentralized, fair, and engaging prediction market platform that al
 
 2. **Real-Time Data Integration**:
 
-   - Pull-based oracle system updates prediction data every 15 seconds.
-   - Dynamic adjustment of odds and probabilities based on real-time events.
+   - Pull-based oracle system updates prediction data within the V4 Hooks.
+   - Dynamic adjustment of odds and probabilities based on real-time events using V4 Hooks.
+     NOTE: For the purposes of this hackathon, a MockOracle is used
 
 3. **Decentralized and Transparent**:
 
-   - Utilizes Uniswap V4 hooks to manage liquidity and ensure fair market conditions.
+   - Utilizes V4 hooks to manage liquidity and ensure fair market conditions.
    - Smart contracts govern the prediction markets, ensuring transparency and reducing manipulation risks.
 
 4. **User-Friendly Interface**:
@@ -38,7 +39,7 @@ To create a decentralized, fair, and engaging prediction market platform that al
 
 1. **Smart Contracts**:
 
-   - **PredictionMarketHook**: Implements Uniswap V4 hooks for dynamic liquidity management.
+   - **PredictionMarketHook**: Implements V4 hooks for dynamic liquidity management.
    - **MockPusherOracle**: A pull-based oracle contract that updates prediction data based on block timestamps and user interactions.
 
 2. **Oracle Integration**:
@@ -74,6 +75,11 @@ To create a decentralized, fair, and engaging prediction market platform that al
 #### Unique Selling Proposition (USP)
 
 "Pancake Prediction Market" stands out with its versatile application across various domains and its robust, real-time data integration. The platform ensures fair market conditions, transparency, and a user-friendly experience, making it a go-to destination for diverse prediction market scenarios.
+
+### Hackathon Hacks
+
+1. **Usage of Mock Oracle**:
+   - A mock oracle was used to simulate live results for the England vs Spain match. This allowed for efficient testing and demonstration of the platform's capabilities without relying on real-time external data sources.
 
 ### Conclusion
 
