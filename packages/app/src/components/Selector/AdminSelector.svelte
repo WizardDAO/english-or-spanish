@@ -126,11 +126,14 @@
 
   .login {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 16px;
   }
 
   .login button {
+    width: 100%;
+    margin: 4px;
     background-color: blue;
     color: white;
     border: none;
@@ -164,9 +167,9 @@
   <div class="tabs">
     <div class="tab selected">Admin</div>
   </div>
-  <div class="setting">
-    <div class="selected" on:click={() => toggleOutcome('Spain')}>Spain Goal</div>
-    <div class="selected" on:click={() => toggleOutcome('England')}>England Goal</div>
+  <div class="login">
+    <button>Spain Goal</button>
+    <button>Englang Goal</button>
   </div>
 
 </div>
