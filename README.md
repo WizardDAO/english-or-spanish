@@ -2,7 +2,7 @@
 
 #### Project Overview
 
-"Pancake Prediction Market" is an innovative and versatile decentralized prediction market platform. Leveraging Uniswap V4 hooks and a pull-based oracle mechanism, the platform allows users to engage in prediction markets across various domains, including sports, politics, finance, and entertainment. The platform aims to showcase its capabilities through a football betting use case during the hackathon, specifically featuring the Euro 2024 matches.
+"Pancake Prediction Market" is an innovative and versatile decentralized prediction market platform. Leveraging v4 hooks and a pull-based oracle mechanism, the platform allows users to engage in prediction markets across various domains, including sports, politics, finance, and entertainment. The platform aims to showcase its capabilities through a football betting use case during the hackathon, specifically featuring finals of the Euro 2024, England vs. Spain.
 
 #### Objective
 
