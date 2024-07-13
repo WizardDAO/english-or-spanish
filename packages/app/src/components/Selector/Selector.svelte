@@ -125,6 +125,7 @@
   }
 
   .login button {
+    width: 100%;
     background-color: blue;
     color: white;
     border: none;
