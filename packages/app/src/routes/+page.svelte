@@ -1,10 +1,11 @@
 <script lang="ts">
   import { Page } from '$components/Page';
-  import { Selector } from '$components/Selector';
+  import { AdminSelector, Selector } from '$components/Selector';
 </script>
 
 <!-- Body -->
 <Page>
   
   <Selector />
+  <AdminSelector />
 </Page>
