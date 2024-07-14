@@ -8,8 +8,6 @@ import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi';
 
 const projectId = PUBLIC_WALLETCONNECT_PROJECT_ID;
 
-const chains: [Chain, ...Chain[]] = [base];
-
 export type ValidChainIds = number;
 
 const metadata = {
@@ -18,6 +16,33 @@ const metadata = {
   url: 'https://zkflex.xyz/',
   icons: ['https://zkflex.xyz/'],
 };
+
+import { defineChain } from 'viem/utils/chain/defineChain.js';
+
+export const sepolia = /*#__PURE__*/ defineChain({
+  id: 11155111,
+  name: 'Sepolia',
+  nativeCurrency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.sepolia.dev'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Blockscout',
+      url: 'https://eth-sepolia.blockscout.com/',
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      blockCreated: 5022,
+    },
+  },
+});
+
+const chains: [Chain, ...Chain[]] = [sepolia];
 
 // export const wagmiConfig = defaultWagmiConfig({ projectId, chains, metadata, transports: { [hardhat.id]: transport } });
 export const wagmiConfig = defaultWagmiConfig({
@@ -39,7 +64,7 @@ export const web3Modal = createWeb3Modal({
     '--w3m-accent': '#1998FC',
     '--w3m-color-mix': '#FFFFFF',
   },
-  defaultChain: base,
+  defaultChain: sepolia,
   allowUnsupportedChain: true,
 });
 
